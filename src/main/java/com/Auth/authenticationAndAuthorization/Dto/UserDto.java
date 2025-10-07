@@ -1,5 +1,7 @@
 package com.Auth.authenticationAndAuthorization.Dto;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,8 +16,8 @@ public class UserDto {
 	private String Email;
 	private String Password;
 	private String Otp;
-	private String createDate;
-	private String updateDate;
+	private LocalDateTime createDate;
+	private LocalDateTime updateDate;
 	
 	public Long getId() {
 		return Id;
@@ -65,19 +67,19 @@ public class UserDto {
 		Otp = otp;
 	}
 
-	public String getCreateDate() {
+	public LocalDateTime getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(String createDate) {
+	public void setCreateDate(LocalDateTime createDate) {
 		this.createDate = createDate;
 	}
 
-	public String getUpdateDate() {
+	public LocalDateTime getUpdateDate() {
 		return updateDate;
 	}
 
-	public void setUpdateDate(String updateDate) {
+	public void setUpdateDate(LocalDateTime updateDate) {
 		this.updateDate = updateDate;
 	}	
 
