@@ -17,4 +17,5 @@ API'S :
 * then user login with their credentials, if the user details is matching with our DB records Application give one Bearer Token to the user.
 * after that we use that token for other API'S like getAllUsers.
 * in getAllUsers Api we give that token via headers then the application check the token is valid .
-* if it is valid token the api working respectively otherwise Unauthorized Exception Occure. 
+* if it is valid token the api working respectively otherwise Unauthorized Exception Occure.
+* using MYSQL Database for data Storage.
