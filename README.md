@@ -19,3 +19,4 @@ API'S :
 * in getAllUsers Api we give that token via headers then the application check the token is valid .
 * if it is valid token the api working respectively otherwise Unauthorized Exception Occure.
 * using MYSQL Database for data Storage.
+* add validation for user response data 
