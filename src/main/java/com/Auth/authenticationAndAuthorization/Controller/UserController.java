@@ -14,6 +14,8 @@ import com.Auth.authenticationAndAuthorization.Dto.UserDto;
 import com.Auth.authenticationAndAuthorization.Entity.User;
 import com.Auth.authenticationAndAuthorization.Service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/user/")
 public class UserController {
@@ -25,14 +27,14 @@ public class UserController {
 	}
 	
 	@PostMapping("/UserRegister")
-	public ResponseEntity<UserDto> userRegister(@RequestBody UserDto userDto){
+	public ResponseEntity<UserDto> userRegister(@Valid @RequestBody UserDto userDto){
 		userService.userRegister(userDto);
 		return ResponseEntity.created(null).build();
 		
 	}
 	
 	@PostMapping("/Login")
-	public ResponseEntity<?> userLogin(@RequestBody UserDto userDto){
+	public ResponseEntity<?> userLogin(@Valid @RequestBody UserDto userDto){
 		return userService.userLogin(userDto);
 		
 	}
